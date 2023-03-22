@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    /*font-family: "PT Sans", sans-serif;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 26px;*/
+}
+
+.body-container {
+    background-color: #FFFFFF;
+    width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+
+/* НАВИГАЦИЯ и МЕНЮ */
+
+.navigation {
+    margin-left: 140px;
+    margin-right: 140px;
+}
+
+.navigation-top-container {
+    display: flex;
+}
+
+.navigation-list-user {
+    display: flex;
+    list-style: none;
+}
+
+.navigation-item-user:first-child {
+    margin-right: 150px;
+}
+
+.navigation-list-menu {
+    display: flex;
+}
+
+
+/* ОСНОВНАЯ ЧАСТЬ MAIN */
+
+.main-container {
+    flex-grow: 1;
+}
+
+.page-container {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.popular-product:not(:first-child) {
+    display: none;
+}
+
+
+/* АССОРТИМЕНТ */
+
+.products-catalog {
+    margin-left: 140px;
+    margin-right: 140px;
+}
+
+.products-catalog-list {
+    display: flex;
+}
+
+
+/* ADVANTAGES */
+
+.advantages-container {
+    display: flex;
+    margin-left: 140px;
+    margin-right: 140px;
+}
+
+.advantages-container-right {
+    display: flex;
+}
+
+.advantages-container-delivery-rare {
+    min-height: 100px;
+    margin-left: 140px;
+    margin-right: 140px;
+}
+
+.delivery-rare-icon {
+    background-color: #FFE17F;
+    padding: 35px 39px;
+}
+
+
+/*CONTACTS ABOUT*/
+
+.contacts-about-container {
+    margin-left: 140px;
+    margin-right: 140px;
+}
+
+
+/* SUBSCRIBE */
+
+.subscribe-container-top,
+.subscribe-container-bottom {
+    margin-left: 140px;
+    margin-right: 140px;
+}
+
+
+/*FOOTER*/
+
+.page-footer {
+    background-color: #444444;
+}
+
+.page-footer-container {
+    margin-left: 140px;
+    margin-right: 140px;
+}
+
+.footer-link-logo-img path {
+    fill: #FFC700;
+}
