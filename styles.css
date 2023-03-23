@@ -68,6 +68,35 @@ body {
     display: flex;
 }
 
+.products-catalog-icon {
+    width: 160px;
+    height: 160px;
+}
+
+.products-catalog-item:first-child .products-catalog-icon {
+    background-image: url(images/index/catalog_icon_vr.svg);
+}
+
+.products-catalog-item:nth-child(2) .products-catalog-icon {
+    background-image: url(images/index/catalog_icon_monopod.svg);
+}
+
+.products-catalog-item:nth-child(3) .products-catalog-icon {
+    background-image: url(images/index/catalog_icon_action_camera.svg);
+}
+
+.products-catalog-item:nth-child(4) .products-catalog-icon {
+    background-image: url(images/index/catalog_icon_fitnes.svg);
+}
+
+.products-catalog-item:nth-child(5) .products-catalog-icon {
+    background-image: url(images/index/catalog_icon_smart_watch.svg);
+}
+
+.products-catalog-item:last-child .products-catalog-icon {
+    background-image: url(images/index/catalog_icon_quadrocopter.svg);
+}
+
 
 /* ADVANTAGES */
 
@@ -81,6 +110,27 @@ body {
     display: flex;
 }
 
+.advantages-container:first-of-type .advantages-container-icon {
+    background-image: url(images/index/advantages_delivery.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 136px;
+}
+
+.advantages-container:nth-of-type(2) .advantages-container-icon {
+    background-image: url(images/index/advantages_guarantee.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 171px;
+}
+
+.advantages-container:nth-of-type(3) .advantages-container-icon {
+    background-image: url(images/index/advantages_credit.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 156px;
+}
+
 .advantages-container-delivery-rare {
     min-height: 100px;
     margin-left: 140px;
@@ -88,6 +138,10 @@ body {
 }
 
 .delivery-rare-icon {
+    background-image: url(images/index/delivery_rare.svg);
+    width: 125px;
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: #FFE17F;
     padding: 35px 39px;
 }
