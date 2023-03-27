@@ -18,7 +18,7 @@
     font-family: "Rubik";
     font-style: normal;
     font-weight: 700;
-    src: url(fonts/rubik/rubik-400.woff2) format("woff2");
+    src: url(fonts/rubik/rubik-700.woff2) format("woff2");
     font-display: swap;
 }
 
@@ -26,7 +26,7 @@
     font-family: "Rubik";
     font-style: italic;
     font-weight: 700;
-    src: url(fonts/rubik/rubik-400.woff2) format("woff2");
+    src: url(fonts/rubik/rubik-700.woff2) format("woff2");
     font-display: swap;
 }
 
@@ -224,11 +224,13 @@ body {
     cursor: pointer;
 }
 
-.navigation-item-menu-link:first-child {
-    margin-left: 60px;
-    min-width: 236px;
-    text-align: left;
-    margin-right: 7px;
+.navigation-item-menu:nth-child(2) {
+    margin-left: 276px;
+    margin-right: 45px;
+}
+
+.navigation-item-menu:nth-child(3) {
+    margin-right: 45px;
 }
 
 .navigation-item-menu-button {
@@ -247,8 +249,9 @@ body {
     display: none;
     position: absolute;
     width: 1160px;
+    min-height: 180px;
     background-color: #FFE17F;
-    padding-top: 15px;
+    padding-top: 8px;
 }
 
 .navigation-bottom-container {
@@ -256,6 +259,9 @@ body {
 }
 
 .nested-link {
+    margin-left: 60px;
+    min-width: 236px;
+    text-align: left;
     position: relative;
 }
 
@@ -272,7 +278,6 @@ body {
 
 .nested:hover .navigation-products-catalog-container {
     display: flex;
-    gap: 30px;
     white-space: nowrap;
 }
 
@@ -291,16 +296,33 @@ body {
 .navigation-list-menu {
     padding: 0;
     margin-top: 30px;
+    margin-bottom: 0;
     display: flex;
     align-items: baseline;
     list-style-type: none;
 }
 
+
+/*Блок всплывающего меню в хэдере*/
+
 .navigation-products-catalog-list {
     list-style-type: none;
     padding: 0;
     min-height: 120px;
-    min-width: 211px;
+}
+
+.navigation-products-catalog-list:first-child {
+    padding-right: 30px;
+    width: 222px;
+}
+
+.navigation-products-catalog-list:not(:first-child) {
+    width: 211px;
+}
+
+.navigation-products-catalog-item {
+    line-height: 40px;
+    font-size: 16px;
 }
 
 .navigation-products-catalog-list:first-child {
@@ -326,8 +348,43 @@ body {
     margin: 0 auto;
 }
 
-.popular-product:not(:first-child) {
+.popular-products-slider-container {
+    background-image: linear-gradient(#FFE17F 116px, #FFFFFF 116px);
+}
+
+.popular-product:not(:first-of-type) {
     display: none;
+}
+
+.popular-product {
+    display: flex;
+}
+
+.popular-product-title {
+    min-width: 545px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 50px;
+    margin: 0;
+}
+
+.slider-description {
+    margin-left: 40px;
+}
+
+.slide-number {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 180px;
+    line-height: 30px;
+    color: #ffffff;
+    text-align: right;
+    display: block;
+    margin-top: 57px;
+    margin-right: 49px;
 }
 
 
