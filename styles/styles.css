@@ -2,7 +2,7 @@
     font-family: "Rubik";
     font-style: normal;
     font-weight: 400;
-    src: url(fonts/rubik/rubik-400.woff2) format("woff2");
+    src: url(../fonts/rubik/rubik-400.woff2) format("woff2");
     font-display: swap;
 }
 
@@ -10,7 +10,7 @@
     font-family: "Rubik";
     font-style: italic;
     font-weight: 400;
-    src: url(fonts/rubik/rubik-400.woff2) format("woff2");
+    src: url(../fonts/rubik/rubik-400.woff2) format("woff2");
     font-display: swap;
 }
 
@@ -18,7 +18,7 @@
     font-family: "Rubik";
     font-style: normal;
     font-weight: 700;
-    src: url(fonts/rubik/rubik-700.woff2) format("woff2");
+    src: url(../fonts/rubik/rubik-700.woff2) format("woff2");
     font-display: swap;
 }
 
@@ -26,7 +26,7 @@
     font-family: "Rubik";
     font-style: italic;
     font-weight: 700;
-    src: url(fonts/rubik/rubik-700.woff2) format("woff2");
+    src: url(../fonts/rubik/rubik-700.woff2) format("woff2");
     font-display: swap;
 }
 
@@ -34,7 +34,7 @@
     font-family: "Raleway";
     font-style: normal;
     font-weight: 800;
-    src: url(fonts/raleway/raleway-800.woff2) format("woff2");
+    src: url(../fonts/raleway/raleway-800.woff2) format("woff2");
     font-display: swap;
 }
 
@@ -42,7 +42,7 @@
     font-family: "Raleway";
     font-style: italic;
     font-weight: 800;
-    src: url(fonts/raleway/raleway-800.woff2) format("woff2");
+    src: url(../fonts/raleway/raleway-800.woff2) format("woff2");
     font-display: swap;
 }
 
@@ -112,12 +112,13 @@ body {
 }
 
 .navigation-search-form-input {
+    font-family: "Rubik";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     border: 2px solid #000000;
-    border-radius: 50px 0px 0px 50px;
+    border-radius: 50px 0 0 50px;
     width: 359px;
     margin: 0;
     padding: 10px 48px;
@@ -145,7 +146,7 @@ body {
     text-align: center;
     border: 2px solid #000000;
     border-left: none;
-    border-radius: 0px 50px 50px 0px;
+    border-radius: 0 50px 50px 0;
     margin: 0 auto;
     cursor: pointer;
     width: 160px;
@@ -183,7 +184,7 @@ body {
 }
 
 .navigation-item-user:nth-child(3) .navigation-item-icon {
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .navigation-item-icon-value {
@@ -199,7 +200,7 @@ body {
     margin: 0 auto;
     padding: 0;
     left: -16px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .navigation-item-link {
@@ -269,15 +270,15 @@ body {
     position: relative;
 }
 
-.nested-link::before {
+.navigation-item-menu-button::before {
     content: "";
     position: absolute;
-    background-image: url(images/index/+.svg);
+    background-image: url(../images/index/plus.svg);
     width: 16px;
     height: 16px;
     opacity: 0.3;
-    right: 17px;
-    top: 3px;
+    right: 16px;
+    top: 15px;
 }
 
 .nested:hover .navigation-products-catalog-container {
@@ -285,12 +286,12 @@ body {
     white-space: nowrap;
 }
 
-.nested:hover .nested-link::before {
-    background-image: url(images/index/-.svg);
+.nested:hover .navigation-item-menu-button::before {
+    background-image: url(../images/index/minus.svg);
     background-repeat: no-repeat;
     position: absolute;
-    right: 17px;
-    top: 9px;
+    right: 16px;
+    top: 22px;
 }
 
 .navigation-item-menu-button {
@@ -352,6 +353,10 @@ body {
     margin: 0 auto;
 }
 
+.hero {
+    position: relative;
+}
+
 .popular-products-slider-container {
     background-image: linear-gradient(#FFE17F 116px, #FFFFFF 116px);
 }
@@ -397,19 +402,14 @@ body {
 }
 
 .popular-product-chars {
-    width: 307px;
     margin-top: 50px;
-}
-
-.popular-product-table-rows {
-    width: 140px;
+    border-spacing: 20px 12px;
 }
 
 .popular-product-table-head {
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 400;
-    width: 140px;
     padding: 0;
     font-size: 16px;
     line-height: 30px;
@@ -424,7 +424,6 @@ body {
     line-height: 30px;
     padding: 0;
     text-align: left;
-    padding-bottom: 12px;
 }
 
 
@@ -438,7 +437,7 @@ body {
 
 .popular-product-image {
     position: relative;
-    top: -30px;
+    bottom: 35px;
 }
 
 .slider-button {
@@ -449,17 +448,17 @@ body {
     height: 60px;
     margin-top: 211px;
     margin-bottom: 289px;
-    background-image: url(images/index/slider_button.svg);
+    background-image: url(../images/index/slider_button.svg);
     cursor: pointer;
     z-index: 1;
 }
 
-.slider-button:first-child {
+.slider-button:first-of-type {
     position: absolute;
-    left: 27px;
+    left: 30px;
 }
 
-.slider-button:last-child {
+.slider-button:last-of-type {
     position: absolute;
     left: 540px;
     transform: rotate(180deg);
@@ -487,6 +486,50 @@ body {
 }
 
 
+/*Радиокнопки слайдера*/
+
+.slider-radio-container {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 80%;
+}
+
+.slider-radio-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 0;
+    list-style-type: none;
+}
+
+.slider-radio-item {
+    display: block;
+    width: 12px;
+    height: 12px;
+}
+
+.control-slider {
+    width: 12px;
+    height: 12px;
+    margin: 0 auto;
+    cursor: pointer;
+    display: block;
+}
+
+.control-mark {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #000000;
+    border-radius: 50%;
+}
+
+.control-slider .control-input[type="radio"]:checked+.control-mark {
+    background-color: #000000;
+}
+
+
 /* АССОРТИМЕНТ */
 
 .products-catalog {
@@ -504,27 +547,27 @@ body {
 }
 
 .products-catalog-item:first-child .products-catalog-icon {
-    background-image: url(images/index/catalog_icon_vr.svg);
+    background-image: url(../images/index/catalog_icon_vr.svg);
 }
 
 .products-catalog-item:nth-child(2) .products-catalog-icon {
-    background-image: url(images/index/catalog_icon_monopod.svg);
+    background-image: url(../images/index/catalog_icon_monopod.svg);
 }
 
 .products-catalog-item:nth-child(3) .products-catalog-icon {
-    background-image: url(images/index/catalog_icon_action_camera.svg);
+    background-image: url(../images/index/catalog_icon_action_camera.svg);
 }
 
 .products-catalog-item:nth-child(4) .products-catalog-icon {
-    background-image: url(images/index/catalog_icon_fitnes.svg);
+    background-image: url(../images/index/catalog_icon_fitnes.svg);
 }
 
 .products-catalog-item:nth-child(5) .products-catalog-icon {
-    background-image: url(images/index/catalog_icon_smart_watch.svg);
+    background-image: url(../images/index/catalog_icon_smart_watch.svg);
 }
 
 .products-catalog-item:last-child .products-catalog-icon {
-    background-image: url(images/index/catalog_icon_quadrocopter.svg);
+    background-image: url(../images/index/catalog_icon_quadrocopter.svg);
 }
 
 
@@ -541,21 +584,21 @@ body {
 }
 
 .advantages-container:first-of-type .advantages-container-icon {
-    background-image: url(images/index/advantages_delivery.svg);
+    background-image: url(../images/index/advantages_delivery.svg);
     background-repeat: no-repeat;
     background-position: center;
     width: 136px;
 }
 
 .advantages-container:nth-of-type(2) .advantages-container-icon {
-    background-image: url(images/index/advantages_guarantee.svg);
+    background-image: url(../images/index/advantages_guarantee.svg);
     background-repeat: no-repeat;
     background-position: center;
     width: 171px;
 }
 
 .advantages-container:nth-of-type(3) .advantages-container-icon {
-    background-image: url(images/index/advantages_credit.svg);
+    background-image: url(../images/index/advantages_credit.svg);
     background-repeat: no-repeat;
     background-position: center;
     width: 156px;
@@ -568,7 +611,7 @@ body {
 }
 
 .delivery-rare-icon {
-    background-image: url(images/index/delivery_rare.svg);
+    background-image: url(../images/index/delivery_rare.svg);
     width: 125px;
     background-repeat: no-repeat;
     background-position: center;
