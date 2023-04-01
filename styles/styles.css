@@ -378,12 +378,15 @@ body {
     line-height: 50px;
     margin: 0;
     margin-top: 5px;
+    margin-bottom: 29px;
 }
 
 .popular-product-description {
     font-size: 18px;
     line-height: 30px;
     color: #444444;
+    margin: 0;
+    margin-bottom: 50px;
 }
 
 .popular-product-information-link {
@@ -492,7 +495,7 @@ body {
     position: absolute;
     left: 50%;
     right: 50%;
-    top: 80%;
+    bottom: 15px;
 }
 
 .slider-radio-list {
@@ -519,8 +522,8 @@ body {
 
 .control-mark {
     display: block;
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     border: 2px solid #000000;
     border-radius: 50%;
 }
@@ -535,15 +538,21 @@ body {
 .products-catalog {
     margin-left: 140px;
     margin-right: 140px;
+    margin-top: 40px;
+    margin-bottom: 70px;
 }
 
 .products-catalog-list {
     display: flex;
+    padding: 0;
+    list-style-type: none;
+    gap: 40px;
 }
 
 .products-catalog-icon {
     width: 160px;
     height: 160px;
+    background-color: #FFE17F;
 }
 
 .products-catalog-item:first-child .products-catalog-icon {
@@ -570,8 +579,25 @@ body {
     background-image: url(../images/index/catalog_icon_quadrocopter.svg);
 }
 
+.products-catalog-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.products-catalog-name {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+}
+
 
 /* ADVANTAGES */
+
+
+/* Левый блок */
 
 .advantages-container {
     display: flex;
@@ -579,25 +605,100 @@ body {
     margin-right: 140px;
 }
 
-.advantages-container-right {
-    display: flex;
+.advantages-list {
+    list-style-type: none;
+    padding: 0;
+    min-width: 287px;
+    border-right: 7px solid #000000;
 }
 
-.advantages-container:first-of-type .advantages-container-icon {
+.advantages-item:first-child {
+    margin-top: 65px;
+}
+
+.advantages-item:not(:last-child) {
+    margin-bottom: 35px;
+}
+
+.advantages-item:last-child {
+    margin-bottom: 65px;
+}
+
+.advantages-current {
+    color: #FFE17F;
+    background-color: #000000;
+    ;
+}
+
+.advantages-item-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.2em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-right: 100%;
+    min-width: 160px;
+    padding-top: 9px;
+    padding-bottom: 11px;
+}
+
+.advantages-item:not(.advantages-current) .advantages-item-link {
+    background-image: linear-gradient( #FFFFFF 15px, #FFE17F 15px, #FFE17F 22px, #FFFFFF 22px);
+}
+
+
+/*Правый блок*/
+
+.advantages-container-right {
+    display: flex;
+    margin-left: 116px;
+    margin-top: 72.5px;
+}
+
+.advantages-container-right-info {
+    width: 479px;
+}
+
+.advantages-title {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 50px;
+    margin: 0;
+    margin-bottom: 34px;
+}
+
+.advantages-description {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #444444;
+}
+
+.advantages-container:first-of-type .advantages-container-right .advantages-container-icon {
     background-image: url(../images/index/advantages_delivery.svg);
     background-repeat: no-repeat;
     background-position: center;
     width: 136px;
 }
 
-.advantages-container:nth-of-type(2) .advantages-container-icon {
+.advantages-container:nth-of-type(2) .advantages-container-right .advantages-container-icon {
     background-image: url(../images/index/advantages_guarantee.svg);
     background-repeat: no-repeat;
     background-position: center;
     width: 171px;
 }
 
-.advantages-container:nth-of-type(3) .advantages-container-icon {
+.advantages-container:last-of-type .advantages-container-right .advantages-container-icon {
     background-image: url(../images/index/advantages_credit.svg);
     background-repeat: no-repeat;
     background-position: center;
@@ -617,6 +718,10 @@ body {
     background-position: center;
     background-color: #FFE17F;
     padding: 35px 39px;
+}
+
+.delivery-rare-link {
+    display: flex;
 }
 
 
