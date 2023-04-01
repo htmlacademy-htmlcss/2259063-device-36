@@ -85,13 +85,13 @@ body {
 .navigation {
     margin-left: 140px;
     margin-right: 140px;
+    padding-left: 60px;
+    padding-right: 60px;
     background-image: linear-gradient(#FFFFFF 40px, #FFE17F 40px);
 }
 
 .navigation-top-container {
     display: flex;
-    padding-left: 60px;
-    padding-right: 60px;
 }
 
 .navigation-link-logo-img {
@@ -253,6 +253,7 @@ body {
     min-height: 180px;
     background-color: #FFE17F;
     padding-top: 8px;
+    left: -60px;
 }
 
 .navigation-bottom-container {
@@ -264,7 +265,6 @@ body {
 }
 
 .nested-link {
-    margin-left: 60px;
     min-width: 236px;
     text-align: left;
     position: relative;
@@ -319,6 +319,7 @@ body {
 .navigation-products-catalog-list:first-child {
     padding-right: 30px;
     width: 222px;
+    padding-left: 60px;
 }
 
 .navigation-products-catalog-list:not(:first-child) {
@@ -328,10 +329,6 @@ body {
 .navigation-products-catalog-item {
     line-height: 40px;
     font-size: 16px;
-}
-
-.navigation-products-catalog-list:first-child {
-    padding-left: 60px;
 }
 
 .navigation-products-catalog-link {
@@ -346,6 +343,8 @@ body {
 
 .main-container {
     flex-grow: 1;
+    width: 1160px;
+    margin: 0 auto;
 }
 
 .page-container {
@@ -536,17 +535,20 @@ body {
 /* АССОРТИМЕНТ */
 
 .products-catalog {
-    margin-left: 140px;
-    margin-right: 140px;
     margin-top: 40px;
     margin-bottom: 70px;
 }
 
 .products-catalog-list {
     display: flex;
+    flex-wrap: wrap;
     padding: 0;
     list-style-type: none;
     gap: 40px;
+}
+
+.products-catalog-item {
+    width: 160px;
 }
 
 .products-catalog-icon {
@@ -601,8 +603,6 @@ body {
 
 .advantages-container {
     display: flex;
-    margin-left: 140px;
-    margin-right: 140px;
 }
 
 .advantages-list {
