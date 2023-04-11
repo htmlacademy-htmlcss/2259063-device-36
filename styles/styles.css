@@ -1376,6 +1376,11 @@ body {
 
 /*Слайдер*/
 
+.filter-price {
+  border-top: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+}
+
 .filter-price-title {
   font-family: 'Rubik';
   font-style: normal;
