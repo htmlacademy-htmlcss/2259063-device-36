@@ -90,13 +90,13 @@ margin: 0;
 
 .page-header {
   margin: 0 auto;
+  padding-top: 10px;
 }
 
 .navigation {
   width: 1160px;
   padding-left: 60px;
   padding-right: 60px;
-  margin-top: 10px;
   background-image: linear-gradient(#FFFFFF 20px, #FFE17F 20px);
 
 }
@@ -199,6 +199,8 @@ margin: 0;
   white-space: nowrap;
 }
 
+
+
 .navigation-item-user:first-child {
   min-width: 81px;
   display: flex;
@@ -267,9 +269,15 @@ margin: 0;
 }
 
 .logout {
-  display: none;
-  width: 190px;
   text-overflow: ellipsis;
+}
+
+.navigation-item-user:has(.logout) {
+  margin-right: 0;
+}
+
+.navigation-list-user:has(.navigation-item-user .logout) {
+  gap: 25px;
 }
 
 .logout-user {
@@ -359,6 +367,7 @@ margin: 0;
   align-items: center;
   gap: 7px;
   margin-bottom: 2px;
+  z-index: 1;
 }
 
 .nested-link::after {
@@ -526,6 +535,7 @@ margin: 0;
 .popular-product-chars {
   margin-top: 50px;
   border-spacing: 20px 12px;
+  padding-bottom: 26px;
 }
 
 .popular-product-table-head {
@@ -610,6 +620,9 @@ margin: 0;
 
 /*Радиокнопки слайдера*/
 
+.slider-buttons-container {
+  position: relative;
+}
 
 
 .slider-buttons-list {
@@ -620,6 +633,9 @@ margin: 0;
   padding: 0;
   list-style-type: none;
   margin: 0;
+  position: absolute;
+  left: 48%;
+  bottom: 10px;
 }
 
 .slider-buttons-item {
@@ -1064,7 +1080,7 @@ margin: 0;
 
 .phone {
   display: block;
-  margin-bottom: 30px;
+  width: 154px;
 }
 
 /* SUBSCRIBE */
@@ -1322,16 +1338,11 @@ margin: 0;
 
 /*КАТАЛОГ*/
 
-.main-inner-section {
-  margin-left: 140px;
-  margin-right: 140px;
-  padding-left: 60px;
-  padding-right: 60px;
-}
-
 /*Шапка с хлебными крошками*/
 
 .inner-header {
+  margin: 0 auto;
+  width: 1045px;
   margin-bottom: 34px;
 }
 
@@ -1394,6 +1405,10 @@ margin: 0;
   gap: 60px;
 }
 
+.filter {
+  margin-top: 30px;
+}
+
 .sort {
   display: flex;
   flex-direction: column;
@@ -1404,6 +1419,7 @@ margin: 0;
   gap: 206px;
   position: relative;
   align-items: center;
+  margin: 25px 0;
 }
 
 /*Селектор сортировки*/
@@ -1485,6 +1501,11 @@ left: 9px;
   line-height: 19px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  margin: 0;
+}
+
+.result-filter .result-title {
+  margin-bottom: 60px;
 }
 
 /*Слайдер*/
@@ -1676,7 +1697,7 @@ left: 9px;
 
 /*Кнопка "Показать"*/
 
-.filter-link {
+.filter-button {
   text-decoration: none;
   color: inherit;
   display: block;
@@ -1692,6 +1713,7 @@ left: 9px;
   position: relative;
   background-image: linear-gradient(#F0F0F0 40%, #FFE17F 40%, #FFE17F 60%, #F0F0F0 60%);
   padding: 10px 5px;
+  border: none;
 }
 
 /* СОСТОЯНИЯ */
@@ -1853,6 +1875,24 @@ left: 9px;
 .delivery-rare-link:focus {
   outline: 2px solid #AF4FFF;
 }
+
+/*Контакты*/
+
+.phone:hover {
+  color: #FFC700;
+  transition: 0.2s;
+}
+
+.phone:active {
+  opacity: 0.3;
+}
+
+.phone:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+
+
 
 /*Подписка*/
 .subscribe-form-email-inputt:not(:placeholder-shown) {

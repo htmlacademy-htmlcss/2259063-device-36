@@ -12,7 +12,7 @@
 
     <header class="page-header">
       <nav class="navigation">
-        <a class="navigation-link" href="#">
+        <a class="navigation-link" href="index.html">
           <svg class="navigation-link-logo" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
             width="145" height="36" fill="none" viewBox="0 0 145 36">
             <path fill="#000"
@@ -33,7 +33,7 @@
           </form>
           <ul class="navigation-list-user">
             <li class="navigation-item-user">
-              <a class="navigation-item-link login" href="#">Войти</a>
+              <!--<a class="navigation-item-link login" href="#">Войти</a>-->
               <a class="navigation-item-link logout" href="#">Коля Петухов</a>
             </li>
             <li class="navigation-item-user">
@@ -91,7 +91,7 @@
     </header>
     <main class="main-index main-container">
       <div class="page-container">
-        <section class="main-inner-section">
+        <!--<section class="main-inner-section">-->
           <header class="inner-header">
             <h1 class="inner-header-title">Моноподы для селфи</h1>
             <ol class="breadcrumbs">
@@ -108,120 +108,123 @@
               </li>
             </ol>
           </header>
-        </section>
-      </div>
+        <!--</section>-->
+
       <section class="result">
         <h2 class="visually-hidden">Результаты поиска</h2>
-        <div class="result-container">
-          <section class="result-section filter">
-            <h3 class="result-title">фильтр:</h3>
-            <div class="filter-price">
-              <p class="filter-price-title">Стоимость</p>
-              <div class="control-slider">
-                <button class="control-slider-button" type="button">
-                  <span class="visually-hidden">стоимость от.</span>
-                </button>
-                <button class="control-slider-button" type="button">
-                  <span class="visually-hidden">стоимость до.</span>
-                </button>
-                <div class="strip">
-                  <div class="strip-line select"></div>
-                  <div class="strip-line not-select"></div>
+          <div class="result-container">
+            <section class="result-section filter">
+              <form class="result-filter" action="https://echo.htmlacademy.ru/" method="get">
+              <h3 class="result-title">фильтр:</h3>
+              <div class="filter-price">
+                <p class="filter-price-title">Стоимость</p>
+                <div class="control-slider">
+                  <button class="control-slider-button" type="button">
+                    <span class="visually-hidden">стоимость от.</span>
+                  </button>
+                  <button class="control-slider-button" type="button">
+                    <span class="visually-hidden">стоимость до.</span>
+                  </button>
+                  <div class="strip">
+                    <div class="strip-line select"></div>
+                    <div class="strip-line not-select"></div>
+                  </div>
+                </div>
+                <div class="value-container">
+                  <span class="control-slider-value">от 0</span>
+                  <span class="control-slider-value">до 5000</span>
                 </div>
               </div>
-              <div class="value-container">
-                <span class="control-slider-value">от 0</span>
-                <span class="control-slider-value">до 5000</span>
+              <div class="fliter-color"><!--Чекбокс цветов-->
+                <p class="filter-color-title">Цвет</p>
+                <ul class="filter-color-list">
+                  <li class="filter-color-item">
+                    <label class="control-color" for="black">
+                      <input class="color-input visually-hidden" type="checkbox" id="black" name="black" checked>
+                      <span class="color-mark"></span>
+                      <span class="color-name">Черный</span>
+                    </label>
+                  <li class="filter-color-item">
+                    <label class="control-color" for="white">
+                      <input class="color-input visually-hidden" type="checkbox" id="white" name="white" checked>
+                      <span class="color-mark"></span>
+                      <span class="color-name">Белый</span>
+                    </label>
+                  </li>
+                  <li class="filter-color-item">
+                    <label class="control-color" for="blue">
+                      <input class="color-input visually-hidden" type="checkbox" id="blue" name="blue">
+                      <span class="color-mark"></span>
+                      <span class="color-name">Синий</span>
+                    </label>
+                  </li>
+                  <li class="filter-color-item">
+                    <label class="control-color" for="red">
+                      <input class="color-input visually-hidden" type="checkbox" id="red" name="red">
+                      <span class="color-mark"></span>
+                      <span class="color-name">Красный</span>
+                    </label>
+                  </li>
+                  <li class="filter-color-item">
+                    <label class="control-color" for="pink">
+                      <input class="color-input visually-hidden" type="checkbox" id="pink" name="pink">
+                      <span class="color-mark"></span>
+                      <span class="color-name">Розовый</span>
+                    </label>
+                  </li>
+                  </li>
+                </ul>
               </div>
-            </div>
-            <div class="fliter-color"><!--Чекбокс цветов-->
-              <p class="filter-color-title">Цвет</p>
-              <ul class="filter-color-list">
-                <li class="filter-color-item">
-                  <label class="control-color" for="black">
-                    <input class="color-input visually-hidden" type="checkbox" id="black" name="black" checked>
-                    <span class="color-mark"></span>
-                    <span class="color-name">Черный</span>
-                  </label>
-                <li class="filter-color-item">
-                  <label class="control-color" for="white">
-                    <input class="color-input visually-hidden" type="checkbox" id="white" name="white" checked>
-                    <span class="color-mark"></span>
-                    <span class="color-name">Белый</span>
-                  </label>
-                </li>
-                <li class="filter-color-item">
-                  <label class="control-color" for="blue">
-                    <input class="color-input visually-hidden" type="checkbox" id="blue" name="blue">
-                    <span class="color-mark"></span>
-                    <span class="color-name">Синий</span>
-                  </label>
-                </li>
-                <li class="filter-color-item">
-                  <label class="control-color" for="red">
-                    <input class="color-input visually-hidden" type="checkbox" id="red" name="red">
-                    <span class="color-mark"></span>
-                    <span class="color-name">Красный</span>
-                  </label>
-                </li>
-                <li class="filter-color-item">
-                  <label class="control-color" for="pink">
-                    <input class="color-input visually-hidden" type="checkbox" id="pink" name="pink">
-                    <span class="color-mark"></span>
-                    <span class="color-name">Розовый</span>
-                  </label>
-                </li>
-                </li>
-              </ul>
-            </div>
-            <div class="filter-bluetooth"><!--Радио блютуз-->
-              <p class="filter-bluetooth-title">Bluetooth</p>
-              <ul class="filter-bluetooth-list">
-                <li class="filter-bluetooth-item">
-                  <label class="control-bluetooth" for="yes">
-                    <input class="bluetooth-input visually-hidden" type="radio" value="yes" id="yes" name="availability"
-                      checked>
-                    <span class="bluetooth-mark"></span>
-                    <span class="bluetooth-name">Есть</span>
-                  </label>
-                </li>
-                <li class="filter-bluetooth-item">
-                  <label class="control-bluetooth" for="no">
-                    <input class="bluetooth-input visually-hidden" type="radio" value="no" id="no" name="availability"
-                      disabled>
-                    <span class="bluetooth-mark"></span>
-                    <span class="bluetooth-name">Нет</span>
-                  </label>
-                </li>
-              </ul>
-            </div>
-            <a class="filter-link line-button" href="#">Показать</a>
-          </section>
-          <section class="result-section sort">
-            <h3 class="result-title visually-hidden">Каталог</h3>
-            <div class="sort-container-top"><!--Сортировка: селектор и стрелочки вверх и вниз-->
-              <h3 class="result-title">Cортировка:</h3>
-              <div class="select-container">
-                <select class="select-control" aria-label="Сортировка">
-                  <option class="select-value" value="popular">Популярные</option>
-                  <option class="select-value" value="new">Новые</option>
-                  <option class="select-value" value="discount">Со скидкой</option>
-                </select>
+              <div class="filter-bluetooth"><!--Радио блютуз-->
+                <p class="filter-bluetooth-title">Bluetooth</p>
+                <ul class="filter-bluetooth-list">
+                  <li class="filter-bluetooth-item">
+                    <label class="control-bluetooth" for="yes">
+                      <input class="bluetooth-input visually-hidden" type="radio" value="yes" id="yes"
+                        name="availability" checked>
+                      <span class="bluetooth-mark"></span>
+                      <span class="bluetooth-name">Есть</span>
+                    </label>
+                  </li>
+                  <li class="filter-bluetooth-item">
+                    <label class="control-bluetooth" for="no">
+                      <input class="bluetooth-input visually-hidden" type="radio" value="no" id="no" name="availability">
+                      <span class="bluetooth-mark"></span>
+                      <span class="bluetooth-name">Нет</span>
+                    </label>
+                  </li>
+                </ul>
               </div>
-              <div class="price-container">
-                <div class="price-button-container"><button class="price-button" type="button"></button></div>
-                <div class="price-button-container"><button class="price-button" type="button"></button></div>
+              <button class="filter-button line-button" type="submit">Показать</button>
+            </form>
+            </section>
+            <section class="result-section sort">
+              <h3 class="result-title visually-hidden">Каталог</h3>
+              <div class="sort-container-top"><!--Сортировка: селектор и стрелочки вверх и вниз-->
+                <h3 class="result-title">Cортировка:</h3>
+                <div class="select-container">
+                  <select class="select-control" aria-label="Сортировка">
+                    <option class="select-value" value="popular">Популярные</option>
+                    <option class="select-value" value="new">Новые</option>
+                    <option class="select-value" value="discount">Со скидкой</option>
+                  </select>
+                </div>
+                <div class="price-container">
+                  <div class="price-button-container"><button class="price-button" type="button"></button></div>
+                  <div class="price-button-container"><button class="price-button" type="button"></button></div>
+                </div>
               </div>
-            </div>
-            <div class="sort-container-bottom"><!--Карточки каталога--></div>
-          </section>
-        </div>
+              <div class="sort-container-bottom"><!--Карточки каталога--></div>
+            </section>
+          </div>
+
       </section>
+    </div>
     </main>
     <footer class="page-footer">
       <div class="page-footer-container">
         <div class="footer-container">
-          <a class="footer-link" href="#">
+          <a class="footer-link" href="index.html">
             <svg class="footer-link-logo" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
               width="145" height="36" fill="none" viewBox="0 0 145 36">
               <path fill="#FFC700"
