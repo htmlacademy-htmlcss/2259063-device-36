@@ -65,7 +65,7 @@ body {
   line-height: 30px;
   color: #000000;
   background-color: #FFFFFF;
-margin: 0;
+  margin: 0;
   min-width: 1440px;
   display: flex;
   flex-direction: column;
@@ -535,7 +535,7 @@ margin: 0;
 .popular-product-chars {
   margin-top: 50px;
   border-spacing: 20px 12px;
-  padding-bottom: 26px;
+  padding-bottom: 35px;
 }
 
 .popular-product-table-head {
@@ -1416,10 +1416,15 @@ margin: 0;
 
 .sort-container-top {
   display: flex;
+  justify-content: space-around;
   gap: 206px;
   position: relative;
   align-items: center;
   margin: 25px 0;
+}
+
+.sort-container-top .result-title {
+  margin-left: 30px;
 }
 
 /*Селектор сортировки*/
@@ -1457,6 +1462,7 @@ margin: 0;
 .price-container {
   display: flex;
   position: relative;
+  margin-right: 30px;
 }
 
 .price-button {
@@ -1470,6 +1476,7 @@ margin: 0;
 .price-button-container {
   width: 30px;
   height: 30px;
+  cursor: pointer;
 }
 
 .price-button-container::before {
@@ -1484,13 +1491,13 @@ margin: 0;
 }
 
 .price-button-container:first-of-type::before {
-left: 9px;
+  left: 9px;
 }
 
 .price-button-container:last-of-type::before {
   right: 9px;
   transform: rotate(180deg);
-  }
+}
 
 /*Фильтр*/
 .result-title {
@@ -1632,7 +1639,7 @@ left: 9px;
   display: block;
   position: absolute;
   left: 4px;
-  top: 4px;
+  top: 3px;
   background-image: url(/images/catalog/checkbox.svg);
   width: 10px;
   height: 10px;
@@ -1715,6 +1722,147 @@ left: 9px;
   padding: 10px 5px;
   border: none;
 }
+
+/*Карточки товаров*/
+
+.sort-container-bottom {
+  background-color: #FFFFFF;
+}
+
+.result-card-list {
+  padding: 0;
+  display: grid;
+  list-style-type: none;
+  grid-template-columns: repeat(2, 360px);
+  gap: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 70px;
+  margin-bottom: 44px;
+}
+
+.result-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.result-card-type {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+
+}
+
+.result-card-price {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: right;
+  color: #444444;
+}
+
+.result-card-description-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.result-card-more-link {
+  text-decoration: none;
+  color: inherit;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 62px;
+  margin-left: 40px;
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 295px;
+  border: 3px solid #E5E5E5;
+}
+
+/*Пагинация*/
+
+.pagination {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  background-color: #EBEBEB;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 78px;
+}
+
+.pagination-link-word {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+  padding: 25px;
+  cursor: pointer;
+}
+
+.pagination-item:first-child .pagination-link-word {
+  color: #444444;
+  opacity: 0.3;
+}
+
+.pagination-link-number {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #444444;
+  opacity: 0.3;
+  text-decoration: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.pagination-item:nth-child(2) .pagination-link-number {
+  opacity: 0.6;
+}
+
+.pagination-item:nth-child(2) {
+ margin-left: 145px;
+}
+
+.pagination-item:nth-child(6) {
+  margin-right: 145px;
+ }
+
+
+
+.pagination-interval {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #444444;
+  opacity: 0.3;
+}
+
 
 /* СОСТОЯНИЯ */
 
@@ -1810,7 +1958,30 @@ left: 9px;
 .navigation-products-catalog-link:focus,
 .navigation-item-link:focus {
   outline: 2px solid #AF4FFF;
-  ;
+}
+
+.slider-button:hover {
+  opacity: 0.6;
+}
+
+.slider-button:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.slider-button:active {
+  opacity: 0.3;
+}
+
+.button-slider:hover {
+  opacity: 0.6;
+}
+
+.button-slider:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.button-slider:active {
+  opacity: 0.3;
 }
 
 /* Кнопки с линиями */
