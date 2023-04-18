@@ -1587,6 +1587,7 @@ body {
   display: flex;
   position: relative;
   margin-right: 30px;
+  gap: 2px;
 }
 
 .price-button {
@@ -1695,16 +1696,17 @@ body {
 }
 
 .select {
-  width: 100px;
+  width: 97px;
   height: 2px;
   background-color: #000000;
 }
 
 .not-select {
-  width: 72px;
+  width: 88px;
   height: 2px;
   background-color: #000000;
   opacity: 0.3;
+  margin-left: 17px;
 }
 
 /*Чекбокс цветов*/
@@ -1753,9 +1755,13 @@ body {
   position: relative;
   width: 20px;
   height: 20px;
-  border: 2px solid #000000;
+  border: 2px solid #CCCCCC;
   border-radius: 3px;
   margin-right: 16px;
+}
+
+.color-input[type="checkbox"]:checked+.color-mark {
+  border: 2px solid #000000;
 }
 
 .color-input[type="checkbox"]:checked+.color-mark::before {
@@ -1809,9 +1815,13 @@ body {
   position: relative;
   width: 20px;
   height: 20px;
-  border: 2px solid #000000;
+  border: 2px solid #CCCCCC;
   border-radius: 50%;
   margin-right: 16px;
+}
+
+.bluetooth-input[type="radio"]:checked+.bluetooth-mark {
+  border: 2px solid #000000;
 }
 
 .bluetooth-input[type="radio"]:checked+.bluetooth-mark::before {
@@ -1865,10 +1875,80 @@ body {
   margin-bottom: 44px;
 }
 
+.result-card-item {
+  position: relative;
+}
+
 .result-card-link {
   text-decoration: none;
   color: inherit;
   display: block;
+}
+
+.result-card-link::before {
+  content: "new";
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  right: 27px;
+  top: 27px;
+  display: none;
+}
+
+.result-card-more-info {
+  text-decoration: none;
+  color: inherit;
+  position: absolute;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  width: 220px;
+  padding: 10px 5px;
+  top: 40%;
+  left: 20%;
+  z-index: 1;
+  display: none;
+}
+
+.result-card-more-info::before {
+  content: "";
+  width: 220px;
+  height: 8px;
+  background-color: #FFE17F;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 15px;
+  left: -2px;
+
+}
+
+
+.result-card-more-info-description {
+  display: block;
+  z-index: 1;
+}
+
+.result-card-description-container {
+  margin-top: 20px;
 }
 
 .result-card-type {
@@ -1878,6 +1958,7 @@ body {
   font-size: 18px;
   line-height: 20px;
   letter-spacing: -0.02em;
+  margin: 0;
 
 }
 
@@ -1889,6 +1970,7 @@ body {
   line-height: 21px;
   text-align: right;
   color: #444444;
+  margin: 0;
 }
 
 .result-card-description-container {
@@ -1920,12 +2002,14 @@ body {
 
 .pagination {
   display: flex;
+  justify-content: space-between;
   list-style-type: none;
   align-items: center;
   background-color: #EBEBEB;
   margin-left: 40px;
   margin-right: 40px;
   margin-bottom: 78px;
+  padding: 0;
 }
 
 .pagination-link-word {
@@ -1941,12 +2025,10 @@ body {
   color: #000000;
   padding: 25px;
   cursor: pointer;
+  text-decoration: none;
 }
 
-.pagination-item:first-child .pagination-link-word {
-  color: #444444;
-  opacity: 0.3;
-}
+
 
 .pagination-link-number {
   font-family: 'Rubik';
@@ -1960,10 +2042,6 @@ body {
   text-decoration: none;
   padding: 10px 15px;
   cursor: pointer;
-}
-
-.pagination-item:nth-child(2) .pagination-link-number {
-  opacity: 0.6;
 }
 
 .pagination-item:nth-child(2) {
@@ -2048,6 +2126,7 @@ body {
   display: block;
   z-index: 2;
 }
+
 /* Меню */
 
 .navigation-item-menu:not(:first-child):hover,
@@ -2290,3 +2369,189 @@ body {
 .footer-phone:focus {
   outline: 2px solid #AF4FFF;
 }
+
+/*Индекс-тултип-корзина*/
+
+.cart-tooltip-link:hover,
+.cart-tooltip-close-button:hover {
+  opacity: 0.6;
+}
+
+.cart-tooltip-link:active,
+.cart-tooltip-close-button:active {
+  opacity: 0.3;
+}
+
+.cart-tooltip-link:focus,
+.cart-tooltip-close-button:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.cart-tooltip-result-link:hover {
+  background-color: #FFE17F;
+}
+
+.cart-tooltip-result-link:active .cart-tooltip-result-link-description {
+  opacity: 0.3;
+}
+
+.cart-tooltip-result-link:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.cart-tooltip-result-link:disabled {
+  background-color: #FFFFFF;
+  opacity: 0.3;
+}
+
+/*Карточки товаров*/
+.result-card-link:hover {
+  opacity: 0.6;
+}
+
+.result-card-item:hover .result-card-more-info {
+  display: block;
+}
+
+.result-card-link:active {
+  opacity: 0.3;
+}
+
+.result-card-link:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.result-card-item:active .result-card-more-info::before {
+  background-color: #FFC700;
+}
+
+/**/
+
+.result-card-more-link:hover {
+  opacity: 0.6;
+}
+
+.result-card-more-link:active {
+  opacity: 0.3;
+}
+
+.result-card-more-link:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+/*Селектор товаров*/
+
+.select-container:hover {
+  opacity: 0.6;
+}
+
+.select-container:active {
+  opacity: 0.3;
+}
+
+.select-control:focus-within {
+  outline: 2px solid #AF4FFF;
+}
+
+.select-control:disabled {
+  opacity: 0.1;
+}
+
+/*Кнопки сортировки товаров сверху и снизу*/
+
+.price-button:hover {
+  opacity: 0.5;
+}
+
+.price-button:active {
+  opacity: 1;
+}
+
+.price-button:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.price-button:disabled {
+  opacity: 0.1;
+}
+
+/*Хлебные крошки*/
+
+.breadcrumbs-link:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-link:active {
+  opacity: 0.3;
+}
+
+.breadcrumbs-link:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+/*Чекбокс*/
+
+.control-color:hover,
+.control-bluetooth:hover {
+  opacity: 0.6;
+}
+
+.control-color:active,
+.control-bluetooth:active {
+  opacity: 0.3;
+}
+
+.control-color:has(.color-input:disabled),
+.control-bluetooth:has(.bluetooth-input:disabled) {
+  opacity: 0.1;
+}
+
+.color-mark:focus,
+.bluetooth-mark:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.color-input:focus+.color-mark,
+.bluetooth-input:focus+.bluetooth-mark {
+  outline: 2px solid #AF4FFF;
+}
+
+/*Слайдер цены*/
+.control-slider-button:hover {
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.control-slider-button:active {
+  opacity: 0.3;
+}
+
+.control-slider-button:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+/*Пагинация*/
+
+.pagination-item:hover:has(.pagination-link-word) {
+  background-color: #DCDCDC;
+}
+
+.pagination-item:active .pagination-link-word {
+  opacity: 0.3;
+}
+
+.pagination-link-word:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.pagination-link-number:hover {
+ opacity: 1;
+}
+
+.pagination-link-number:active {
+  opacity: 0.1;
+ }
+
+ .pagination-link-number:focus {
+  outline: 2px solid #AF4FFF;
+ }
