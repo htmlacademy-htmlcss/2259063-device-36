@@ -6,6 +6,7 @@
     <title>HTML Academy: Девайс - Каталог</title>
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.png">
   </head>
 
   <body>
@@ -34,13 +35,46 @@
           <ul class="navigation-list-user">
             <li class="navigation-item-user">
               <!--<a class="navigation-item-link login" href="#">Войти</a>-->
-              <a class="navigation-item-link logout" href="#">Коля Петухов</a>
+              <a class="navigation-item-link login" href="#"> <span class="login-name">Коля Петухов</span></a>
+            </li>
+            <li class="navigation-item-user">
+              <a class="navigation-item-link logout" href="#">Выйти</a>
             </li>
             <li class="navigation-item-user">
               <a class="navigation-item-link compare" href="#">Сравнить</a>
             </li>
-            <li class="navigation-item-user">
+            <li class="navigation-item-user cart-item">
               <a class="navigation-item-link cart" href="#"><span class="navigation-item-icon-value">2</span>Корзина</a>
+              <!--Тултип на корзине-->
+              <div class="cart-tooltip-container">
+                <div class="cart-tooltip-triangle"></div>
+                <div class="cart-tooltip-field">
+                  <ul class="cart-tooltip-list">
+                    <li class="cart-tooltip-item">
+                      <a class="cart-tooltip-link" href="#">
+                        <img class="cart-tooltip-image" src="/images/index/tooltip_selfie_am.png" width="39" height="43"
+                          alt="Любительская селфи-палка.">
+                        <p class="cart-tooltip-description">Любительская<br>селфи-палка</p>
+                      </a>
+                      <button class="cart-tooltip-close-button"><span class="close-button-icon"></span></button>
+                    </li>
+                    <li class="cart-tooltip-item">
+                      <a class="cart-tooltip-link" href="#">
+                        <img class="cart-tooltip-image" src="/images/index/tooltip_selfie_pro.png" width="39"
+                          height="43" alt="Профессиональная селфи-палка.">
+                        <p class="cart-tooltip-description">Профессиональная<br>селфи-палка</p>
+                      </a>
+                      <button class="cart-tooltip-close-button"><span class="close-button-icon"></span></button>
+                    </li>
+                  </ul>
+                  <div class="cart-tooltip-result">
+                    <p class="cart-tooltip-result-description">Товаров: 2</p>
+                    <p class="cart-tooltip-result-description">Сумма: 2000 ₽</p>
+                  </div>
+                  <a class="cart-tooltip-result-link" href="#"><span
+                      class="cart-tooltip-result-link-description">Открыть корзину</span></a>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -140,39 +174,41 @@
                   <ul class="filter-color-list">
                     <li class="filter-color-item">
                       <label class="control-color" for="black">
-                        <input class="color-input visually-hidden" type="checkbox" id="black" name="black" checked>
+                        <input class="color-input visually-hidden" type="checkbox" id="black" value="black" name="color"
+                          checked>
                         <span class="color-mark"></span>
                         <span class="color-name">Черный</span>
                       </label>
                     <li class="filter-color-item">
                       <label class="control-color" for="white">
-                        <input class="color-input visually-hidden" type="checkbox" id="white" name="white" checked>
+                        <input class="color-input visually-hidden" type="checkbox" id="white" value="white" name="color"
+                          checked>
                         <span class="color-mark"></span>
                         <span class="color-name">Белый</span>
                       </label>
                     </li>
                     <li class="filter-color-item">
                       <label class="control-color" for="blue">
-                        <input class="color-input visually-hidden" type="checkbox" id="blue" name="blue">
+                        <input class="color-input visually-hidden" type="checkbox" id="blue" value="blue" name="color">
                         <span class="color-mark"></span>
                         <span class="color-name">Синий</span>
                       </label>
                     </li>
                     <li class="filter-color-item">
                       <label class="control-color" for="red">
-                        <input class="color-input visually-hidden" type="checkbox" id="red" name="red">
+                        <input class="color-input visually-hidden" type="checkbox" id="red" value="red" name="color">
                         <span class="color-mark"></span>
                         <span class="color-name">Красный</span>
                       </label>
                     </li>
                     <li class="filter-color-item">
                       <label class="control-color" for="pink">
-                        <input class="color-input visually-hidden" type="checkbox" id="pink" name="pink">
+                        <input class="color-input visually-hidden" type="checkbox" id="pink" value="pink" name="color">
                         <span class="color-mark"></span>
                         <span class="color-name">Розовый</span>
                       </label>
                     </li>
-                    </li>
+
                   </ul>
                 </div>
                 <div class="filter-bluetooth"><!--Радио блютуз-->
@@ -219,79 +255,79 @@
                   <li class="result-card-item">
                     <h3 class="result-card-title visually-hidden">Любительская селфи-палка</h3>
                     <a class="result-card-link" href="#">
-                      <img class="result-card-img" src="images/catalog/selfie_am.png" width="360" height="380"
+                      <img class="result-card-img" src="images/catalog/selfie_am.jpg" width="360" height="380"
                         alt="Любительская селфи-палка.">
                       <div class="result-card-description-container">
                         <p class="result-card-type">Любительская<br>селфи-палка</p>
                         <p class="result-card-price">500 ₽</p>
                       </div>
                     </a>
-                    <a class="result-card-more-info" href="#">Подробнее</a>
+                    <span class="result-card-more-info" href="#">Подробнее</span>
                   </li>
                   <li class="result-card-item">
                     <h3 class="result-card-title visually-hidden">Профессиональная селфи-палка</h3>
                     <a class="result-card-link" href="#">
-                      <img class="result-card-img" src="images/catalog/selfie_pro.png" width="360" height="380"
+                      <img class="result-card-img" src="images/catalog/selfie_pro.jpg" width="360" height="380"
                         alt="Профессиональная селфи-палка.">
                       <div class="result-card-description-container">
                         <p class="result-card-type">Профессиональная<br>селфи-палка</p>
                         <p class="result-card-price">1 500 ₽</p>
                       </div>
                     </a>
-                    <a class="result-card-more-info" href="#">Подробнее</a>
+                    <span class="result-card-more-info">Подробнее</span>
                   </li>
                   <li class="result-card-item">
                     <h3 class="result-card-title visually-hidden">Непотопляемая селфи-палка</h3>
                     <a class="result-card-link" href="#">
-                      <img class="result-card-img" src="images/catalog/selfie_water.png" width="360" height="380"
+                      <img class="result-card-img" src="images/catalog/selfie_water.jpg" width="360" height="380"
                         alt="Непотопляемая селфи-палка.">
                       <div class="result-card-description-container">
                         <p class="result-card-type">Непотопляемая<br>селфи-палка</p>
                         <p class="result-card-price">2 500 ₽</p>
                       </div>
                     </a>
-                    <a class="result-card-more-info" href="#">Подробнее</a>
+                    <span class="result-card-more-info" href="#">Подробнее</span>
                   </li>
                   <li class="result-card-item">
                     <h3 class="result-card-title visually-hidden">Селфи-палка «Следуй за мной»</h3>
                     <a class="result-card-link" href="#">
-                      <img class="result-card-img" src="images/catalog/selfie_follow.png" width="360" height="380"
+                      <img class="result-card-img" src="images/catalog/selfie_follow.jpg" width="360" height="380"
                         alt="Селфи-палка «Следуй за мной».">
                       <div class="result-card-description-container">
                         <p class="result-card-type">Селфи-палка «Следуй<br>за мной»</p>
                         <p class="result-card-price">1 500 ₽</p>
                       </div>
                     </a>
-                    <a class="result-card-more-info" href="#">Подробнее</a>
+                    <span class="result-card-more-info" href="#">Подробнее</span>
                   </li>
                 </ul>
                 <a class="result-card-more-link" href="#">Загрузить ещё</a>
                 <ul class="pagination">
                   <li class="pagination-item">
-                      <a class="pagination-link-word" href="#">Назад</a>
+                    <a class="pagination-link-word" href="#">Назад</a>
                   </li>
                   <li class="pagination-item">
-                      <a class="pagination-link-number" href="#">1</a>
+                    <a class="pagination-link-number" href="#">1</a>
                   </li>
                   <li class="pagination-item">
-                      <a class="pagination-link-number" href="#">2</a>
+                    <a class="pagination-link-number" href="#">2</a>
                   </li>
                   <li class="pagination-item">
-                      <a class="pagination-link-number" href="#">3</a>
+                    <a class="pagination-link-number" href="#">3</a>
                   </li>
                   <li class="pagination-item">
-                      <span class="pagination-interval">...</span>
+                    <span class="pagination-interval">...</span>
                   </li>
                   <li class="pagination-item">
-                      <a class="pagination-link-number" href="#">15</a>
+                    <a class="pagination-link-number" href="#">15</a>
                   </li>
                   <li class="pagination-item">
                     <a class="pagination-link-word" href="#">Вперед</a>
-                </li>
-              </ul>
+                  </li>
+                </ul>
+              </div>
             </section>
           </div>
-
         </section>
       </div>
     </main>
