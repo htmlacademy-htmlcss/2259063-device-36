@@ -36,7 +36,6 @@
           <ul class="navigation-list-user">
             <li class="navigation-item-user">
               <a class="navigation-item-link login" href="#">Войти</a>
-              <!--<a class="navigation-item-link logout" href="#"><span class="logout-user">Коля Петухов</span></a>-->
             </li>
             <li class="navigation-item-user">
               <a class="navigation-item-link compare" href="#">Сравнить</a>
@@ -265,7 +264,7 @@
               <a class="products-catalog-link vr" href="#">Виртуальная реальность</a>
             </li>
             <li class="products-catalog-item">
-              <a class="products-catalog-link  monopod" href="#">Моноподы для селфи</a>
+              <a class="products-catalog-link  monopod" href="#">Моноподы<br>для селфи</a>
             </li>
             <li class="products-catalog-item">
               <a class="products-catalog-link action-camera" href="#">Экшн-камеры</a>
@@ -338,6 +337,7 @@
         </section>
         <div class="contacts-about-container">
           <section class="about">
+            <div class="about-line-element"></div>
             <h2 class="about-title">О нас</h2>
             <p class="about-description">
               Огромный выбор гаджетов не оставит равнодушным<br>гика, который есть в каждом из нас.
@@ -353,6 +353,7 @@
             <a class="contacts-about-link line-button" href="#">Подробнее о нас</a>
           </section>
           <section class="contacts">
+            <div class="about-line-element"></div>
             <h2 class="contacts-title">Контакты</h2>
             <p class="contacts-description">
               Вы можете забрать товар сами, заехав в наш офис.<br>Заодно сможете проверить работоспособность
@@ -384,8 +385,8 @@
               <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
                 <p class="subscribe-form-email">
                   <label class="visually-hidden" for="email">Ваша электронная почта.</label>
-                  <input class="subscribe-form-email-input" type="text" id="email" placeholder="Ваш e-mail" name="email"
-                    required />
+                  <input class="subscribe-form-email-input" type="email" id="email" placeholder="Ваш e-mail"
+                    name="email" required />
                   <button class="button-subscribe" type="submit">
                     Подписаться
                   </button>
@@ -464,36 +465,39 @@
           </button>
           <h2 class="modal-title">Доставка под заказ</h2>
           <form class="delivery-form" method="post" action="https://echo.htmlacademy.ru/">
-              <div class="field-group">
-                <label class="form-label" for="delivery-name">Ваше имя:</label>
-                <input class="check-form" type="text" id="delivery-name" name="delivery-name"  placeholder="Введите имя">
+            <div class="field-group">
+              <label class="form-label" for="delivery-name">Ваше имя:</label>
+              <input class="check-form" type="text" id="delivery-name" name="delivery-name" placeholder="Введите имя">
             </div>
             <div class="field-group">
               <label class="form-label" for="delivery-email">Ваш e-mail:</label>
-              <input class="check-form" type="email" id="delivery-email" name="delivery-email" value="Почта" placeholder="Введите электронную почту">
+              <input class="check-form" type="email" id="delivery-email" name="delivery-email" value="Почта"
+                placeholder="Введите электронную почту">
               <span class="email-text">Забавный у вас адрес</span>
-          </div>
-          <div class="field-group">
-            <label class="form-label" for="delivery-product">Что нужно привезти:</label>
-            <input class="check-form" type="text" id="delivery-product" name="delivery-product" placeholder="В свободной форме">
-        </div>
-        <div class="quantity-container">
-          <h2 class="form-label form-quantity">Количество:</h2>
-          <div class="tooltip-active">
-              <div class="tooltip-information-container">
+            </div>
+            <div class="field-group">
+              <label class="form-label" for="delivery-product">Что нужно привезти:</label>
+              <input class="check-form" type="text" id="delivery-product" name="delivery-product"
+                placeholder="В свободной форме">
+            </div>
+            <div class="quantity-container">
+              <h2 class="form-label form-quantity">Количество:</h2>
+              <div class="tooltip-active">
+                <div class="tooltip-information-container">
                   <div class="tooltip-information-triangle"></div>
                   <div class="tooltip-information-field">
-                      <p class="tooltip-information-description">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</p>
+                    <p class="tooltip-information-description">Постараемся найти, сколько нужно. Привезём сколько
+                      получится по требованиям к провозу багажа.</p>
                   </div>
+                </div>
               </div>
-          </div>
-          <div class="quantity-panel">
-              <button class="bt-minus" type="button"><span class="button-border"></span></button>
-              <input class="input-quantity" type="text" class="quantity" name="quantity" value="1">
-              <button class="bt-plus" type="button"><span class="button-border"></span></button>
-          </div>
-      </div>
-      <button type="submit" class="modal-submit line-button">Отправить</button>
+              <div class="quantity-panel">
+                <button class="bt-minus" type="button"><span class="button-border"></span></button>
+                <input class="input-quantity" type="text" name="quantity" value="1">
+                <button class="bt-plus" type="button"><span class="button-border"></span></button>
+              </div>
+            </div>
+            <button type="submit" class="modal-submit line-button">Отправить</button>
           </form>
         </section>
       </div>

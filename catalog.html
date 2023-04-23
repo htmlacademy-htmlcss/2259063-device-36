@@ -34,7 +34,6 @@
           </form>
           <ul class="navigation-list-user">
             <li class="navigation-item-user">
-              <!--<a class="navigation-item-link login" href="#">Войти</a>-->
               <a class="navigation-item-link login" href="#"> <span class="login-name">Коля Петухов</span></a>
             </li>
             <li class="navigation-item-user">
@@ -262,7 +261,7 @@
                         <p class="result-card-price">500 ₽</p>
                       </div>
                     </a>
-                    <span class="result-card-more-info" href="#">Подробнее</span>
+                    <span class="result-card-more-info">Подробнее</span>
                   </li>
                   <li class="result-card-item">
                     <h3 class="result-card-title visually-hidden">Профессиональная селфи-палка</h3>
@@ -286,7 +285,7 @@
                         <p class="result-card-price">2 500 ₽</p>
                       </div>
                     </a>
-                    <span class="result-card-more-info" href="#">Подробнее</span>
+                    <span class="result-card-more-info">Подробнее</span>
                   </li>
                   <li class="result-card-item">
                     <h3 class="result-card-title visually-hidden">Селфи-палка «Следуй за мной»</h3>
@@ -298,7 +297,7 @@
                         <p class="result-card-price">1 500 ₽</p>
                       </div>
                     </a>
-                    <span class="result-card-more-info" href="#">Подробнее</span>
+                    <span class="result-card-more-info">Подробнее</span>
                   </li>
                 </ul>
                 <a class="result-card-more-link" href="#">Загрузить ещё</a>
@@ -390,7 +389,51 @@
         </div>
       </div>
     </footer>
-
+    <div class="modal-container modal-container-closed">
+      <div class="modal modal-search">
+        <section class="modal-content">
+          <button class="modal-close-button">
+            <span class="visually-hidden">Закрыть.</span>
+          </button>
+          <h2 class="modal-title">Доставка под заказ</h2>
+          <form class="delivery-form" method="post" action="https://echo.htmlacademy.ru/">
+            <div class="field-group">
+              <label class="form-label" for="delivery-name">Ваше имя:</label>
+              <input class="check-form" type="text" id="delivery-name" name="delivery-name" placeholder="Введите имя">
+            </div>
+            <div class="field-group">
+              <label class="form-label" for="delivery-email">Ваш e-mail:</label>
+              <input class="check-form" type="email" id="delivery-email" name="delivery-email" value="Почта"
+                placeholder="Введите электронную почту">
+              <span class="email-text">Забавный у вас адрес</span>
+            </div>
+            <div class="field-group">
+              <label class="form-label" for="delivery-product">Что нужно привезти:</label>
+              <input class="check-form" type="text" id="delivery-product" name="delivery-product"
+                placeholder="В свободной форме">
+            </div>
+            <div class="quantity-container">
+              <h2 class="form-label form-quantity">Количество:</h2>
+              <div class="tooltip-active">
+                <div class="tooltip-information-container">
+                  <div class="tooltip-information-triangle"></div>
+                  <div class="tooltip-information-field">
+                    <p class="tooltip-information-description">Постараемся найти, сколько нужно. Привезём сколько
+                      получится по требованиям к провозу багажа.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="quantity-panel">
+                <button class="bt-minus" type="button"><span class="button-border"></span></button>
+                <input class="input-quantity" type="text" name="quantity" value="1">
+                <button class="bt-plus" type="button"><span class="button-border"></span></button>
+              </div>
+            </div>
+            <button type="submit" class="modal-submit line-button">Отправить</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 
 </html>
