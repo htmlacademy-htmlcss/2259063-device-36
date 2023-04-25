@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="icon" href="favicon.ico">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" href="images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon/favicon.png">
   </head>
 
   <body>
@@ -24,8 +24,7 @@
         <div class="navigation-top-container">
           <form class="navigation-search-form" action="https://echo.htmlacademy.ru/" method="get">
             <p class="navigation-search-form-device">
-              <label class="visually-hidden" for="search">Поиск по сайту</label>
-
+              <label class="visually-hidden search-label" for="search">Поиск по сайту</label>
               <input class="navigation-search-form-input" type="text" name="navigation-search" id="search"
                 placeholder="Поиск по сайту" />
               <button class="navigation-search-form-button" type="button">
@@ -35,33 +34,38 @@
           </form>
           <ul class="navigation-list-user">
             <li class="navigation-item-user">
-              <a class="navigation-item-link login" href="#">Войти</a>
+              <a class="navigation-item-link login index-login" href="#">Войти</a>
+            </li>
+            <li class="navigation-item-user">
+              <a class="navigation-item-link login visually-hidden" href="#"> <span class="login-name">Коля Петухов</span></a>
+            </li>
+            <li class="navigation-item-user">
+              <a class="navigation-item-link logout visually-hidden" href="#">Выйти</a>
             </li>
             <li class="navigation-item-user">
               <a class="navigation-item-link compare" href="#">Сравнить</a>
             </li>
-            <li class="navigation-item-user cart-item">
+            <li class="navigation-item-user cart-item cart-index">
               <a class="navigation-item-link cart" href="#"><span class="navigation-item-icon-value">2</span>Корзина</a>
               <!--Тултип на корзине-->
               <div class="cart-tooltip-container">
-                <div class="cart-tooltip-triangle"></div>
                 <div class="cart-tooltip-field">
                   <ul class="cart-tooltip-list">
                     <li class="cart-tooltip-item">
                       <a class="cart-tooltip-link" href="#">
-                        <img class="cart-tooltip-image" src="/images/index/tooltip_selfie_am.png" width="39" height="43"
+                        <img class="cart-tooltip-image" src="images/index/tooltip_selfie_am.jpg" width="39" height="43"
                           alt="Любительская селфи-палка.">
                         <p class="cart-tooltip-description">Любительская<br>селфи-палка</p>
                       </a>
-                      <button class="cart-tooltip-close-button"><span class="close-button-icon"></span></button>
+                      <button class="cart-tooltip-close-button" type="button"><span class="close-button-icon"></span></button>
                     </li>
                     <li class="cart-tooltip-item">
                       <a class="cart-tooltip-link" href="#">
-                        <img class="cart-tooltip-image" src="/images/index/tooltip_selfie_pro.png" width="39"
-                          height="43" alt="Профессиональная селфи-палка.">
+                        <img class="cart-tooltip-image" src="images/index/tooltip_selfie_pro.jpg" width="39" height="43"
+                          alt="Профессиональная селфи-палка.">
                         <p class="cart-tooltip-description">Профессиональная<br>селфи-палка</p>
                       </a>
-                      <button class="cart-tooltip-close-button"><span class="close-button-icon"></span></button>
+                      <button class="cart-tooltip-close-button" type="button"><span class="close-button-icon"></span></button>
                     </li>
                   </ul>
                   <div class="cart-tooltip-result">
@@ -107,6 +111,8 @@
                 </ul>
               </div>
             </li>
+          </ul>
+          <ul class="navigation-list-menu-right">
             <li class="navigation-item-menu">
               <a class="navigation-item-menu-link" href="#">Доставка</a>
             </li>
@@ -128,7 +134,7 @@
           </h1>
           <h2 class="visually-hidden">Популярные товары</h2>
           <div class="popular-products-slider-container">
-            <section class="popular-product">
+            <section class="popular-product current-product">
               <h3 class="visually-hidden">Квадракоптер</h3>
               <div class="slider-image">
                 <button class="slider-button" type="button">
@@ -168,17 +174,13 @@
                 </div>
               </div>
             </section>
-            <section class="popular-product">
+            <section class="popular-product current-product"">
               <h3 class="visually-hidden">Фитнес-браслеты</h3>
               <div class="slider-image">
-                <button class="slider-button" type="button">
                   <span class="visually-hidden">Предыдущий слайд</span>
-                </button>
                 <img class="popular-product-image" src="images/index/slider_2.png" width="560" height="560"
                   alt="Фитнес-браслеты." />
-                <button class="slider-button" type="button">
                   <span class="visually-hidden">Следующий слайд</span>
-                </button>
               </div>
               <div class="slider-description">
                 <span class="slide-number">02</span>
@@ -200,17 +202,13 @@
                 </table>
               </div>
             </section>
-            <section class="popular-product">
+            <section class="popular-product current-product">
               <h3 class="visually-hidden">Селфи-палки</h3>
               <div class="slider-image">
-                <button class="slider-button" type="button">
                   <span class="visually-hidden">Предыдущий слайд</span>
-                </button>
                 <img class="popular-product-image" src="images/index/slider_3.png" width="560" height="560"
                   alt="Селфи-палки." />
-                <button class="slider-button" type="button">
                   <span class="visually-hidden">Следующий слайд</span>
-                </button>
               </div>
               <div class="slider-description">
                 <span class="slide-number">03</span>
@@ -258,7 +256,7 @@
           </div>
         </section>
         <section class="products-catalog">
-          <h3 class="visually-hidden">Ассортимент товаров</h3>
+          <h2 class="visually-hidden">Ассортимент товаров</h2>
           <ul class="products-catalog-list">
             <li class="products-catalog-item">
               <a class="products-catalog-link vr" href="#">Виртуальная реальность</a>
@@ -460,7 +458,7 @@
     <div class="modal-container modal-container-closed">
       <div class="modal modal-search">
         <section class="modal-content">
-          <button class="modal-close-button">
+          <button class="modal-close-button" type="button">
             <span class="visually-hidden">Закрыть.</span>
           </button>
           <h2 class="modal-title">Доставка под заказ</h2>
@@ -481,7 +479,7 @@
                 placeholder="В свободной форме">
             </div>
             <div class="quantity-container">
-              <h2 class="form-label form-quantity">Количество:</h2>
+              <p class="form-label form-quantity">Количество:</p>
               <div class="tooltip-active">
                 <div class="tooltip-information-container">
                   <div class="tooltip-information-triangle"></div>
@@ -492,9 +490,9 @@
                 </div>
               </div>
               <div class="quantity-panel">
-                <button class="bt-minus" type="button"><span class="button-border"></span></button>
+                <button class="button-minus" type="button"><span class="button-border"></span></button>
                 <input class="input-quantity" type="text" name="quantity" value="1">
-                <button class="bt-plus" type="button"><span class="button-border"></span></button>
+                <button class="button-plus" type="button"><span class="button-border"></span></button>
               </div>
             </div>
             <button type="submit" class="modal-submit line-button">Отправить</button>
