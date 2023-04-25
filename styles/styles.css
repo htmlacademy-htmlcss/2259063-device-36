@@ -127,6 +127,23 @@ body {
   width: 517px;
 }
 
+.navigation-search-form-device::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 363px;
+  height: 44px;
+  outline: #AF4FFF 2px solid;
+  bottom: -2px;
+  z-index: 1;
+  left: -3px;
+  display: none;
+}
+
+.navigation-search-form-device:focus::before {
+  display: block;
+}
+
 .navigation-search-form-input {
   font-family: "Rubik";
   font-style: normal;
@@ -149,6 +166,23 @@ body {
   height: 17px;
   position: absolute;
   right: 304%;
+}
+
+.navigation-search-form-button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 166px;
+  height: 44px;
+  outline: #AF4FFF 2px solid;
+  bottom: -4px;
+  z-index: 1;
+  left: -4px;
+  display: none;
+}
+
+.navigation-search-form-button:focus::after {
+  display: block;
 }
 
 .navigation-search-form-input::placeholder {
@@ -270,12 +304,24 @@ body {
   margin-right: 136px;
 }
 
+.index-login {
+  margin-right: 136px;
+}
+
+.navigation-item-user:has(.visually-hidden) {
+  position: absolute;
+}
+
 .navigation-list-user:has(.navigation-item-user .logout) {
   gap: 26px;
 }
 
 .navigation-item-user:last-child {
   position: relative;
+}
+
+.cart-index {
+  margin-left: 14px;
 }
 
 /*Тултип на корзине*/
@@ -288,7 +334,7 @@ body {
   display: none;
 }
 
-.cart-tooltip-triangle {
+/*.cart-tooltip-triangle {
   width: 0;
   height: 0;
   border-left: 9.5px solid transparent;
@@ -296,6 +342,18 @@ body {
   border-bottom: 6px solid #000000;
   margin: 0 auto;
   padding: 0;
+}*/
+
+.cart-tooltip-container::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 9.5px solid transparent;
+  border-right: 9.5px solid transparent;
+  border-bottom: 6px solid #000000;
+  margin: 0 auto;
+  padding: 0;
+  display: block;
 }
 
 .cart-tooltip-field {
@@ -346,8 +404,8 @@ body {
 .cart-tooltip-close-button {
   border: none;
   background-color: #000000;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   cursor: pointer;
   align-self: flex-start;
   padding: 0;
@@ -356,9 +414,10 @@ body {
 .close-button-icon {
   background-image: url(/images/index/tooltip_close_button.svg);
   background-repeat: no-repeat;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   display: block;
+  background-position: center;
 }
 
 .cart-tooltip-result {
@@ -422,6 +481,8 @@ body {
   display: block;
 }
 
+
+
 .navigation-item-menu-link {
   font-family: "Raleway";
   font-weight: 800;
@@ -438,23 +499,30 @@ body {
   padding: 10px 0;
 }
 
-.navigation-item-menu {
-  z-index: 1;
-}
 
 .navigation-item-menu:has(.current-link) {
   border-bottom: 2px solid #000000;
 }
 
-.navigation-item-menu:not(:last-child):not(:first-child) {
-  margin-right: 45px;
-}
+/*.navigation-item-menu:not(:last-child):not(:first-child) {
+  margin-right: 44px;
+}*/
 
-.navigation-item-menu:nth-child(2) {
+/*.navigation-item-menu:nth-child(2) {
   margin-left: 276px;
+}*/
+
+.navigation-list-menu-right {
+  display: flex;
+  width: 870px;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 45px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
 }
-
-
 
 
 
@@ -471,6 +539,9 @@ body {
 .navigation-bottom-container {
   position: relative;
   padding-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 8px;
 }
 
 .nested {
@@ -528,7 +599,6 @@ body {
 
 .navigation-list-menu {
   padding: 0;
-  margin-top: 30px;
   margin-bottom: 0;
   display: flex;
   flex-wrap: wrap;
@@ -894,7 +964,7 @@ body {
 /* Левый блок */
 
 .advantages {
-  background-image: linear-gradient(#FFFFFF 102px, #F0F0F0 102px, #F0F0F0 391px);
+  background-image: linear-gradient(#FFFFFF 118px, #F0F0F0 102px, #F0F0F0 391px);
 }
 
 .advantages-container {
@@ -970,6 +1040,7 @@ body {
   display: flex;
   margin-left: 116px;
   margin-top: 85px;
+  position: relative;
 }
 
 .advantages-container-right-info {
@@ -995,7 +1066,7 @@ body {
   color: #444444;
 }
 
-.advantages-container-right:first-of-type .advantages-container-icon {
+/*.advantages-container-right:first-of-type .advantages-container-icon {
   background-image: url(../images/index/advantages_delivery.svg);
   background-repeat: no-repeat;
   width: 136px;
@@ -1011,7 +1082,9 @@ body {
   background-image: url(../images/index/advantages_credit.svg);
   background-repeat: no-repeat;
   width: 156px;
-}
+}*/
+
+
 
 .advantages-container-right:first-of-type .advantages-container-right-info {
   margin-right: 80px;
@@ -1025,8 +1098,44 @@ body {
   margin-right: 98px;
 }
 
+.advantages-container-right:first-of-type .advantages-container-right-info .advantages-description::after {
+  content: "";
+  display: block;
+  background-image: url(../images/index/advantages_delivery.svg);
+  background-repeat: no-repeat;
+  width: 136px;
+  height: 164px;
+  position: absolute;
+  left: 594px;
+  top: 5px;
+}
+
+.advantages-container-right:nth-of-type(2) .advantages-container-right-info .advantages-description::after {
+  content: "";
+  display: block;
+  background-image: url(../images/index/advantages_guarantee.svg);
+  background-repeat: no-repeat;
+  width: 171px;
+  height: 195px;
+  position: absolute;
+  left: 594px;
+  top: 5px;
+}
+
+.advantages-container-right:nth-of-type(3) .advantages-container-right-info .advantages-description::after {
+  content: "";
+  display: block;
+  background-image: url(../images/index/advantages_credit.svg);
+  background-repeat: no-repeat;
+  width: 149px;
+  height: 180px;
+  position: absolute;
+  left: 594px;
+  top: 5px;
+}
+
 .advantages-container-right:not(:first-of-type) {
-  display: none;
+  /*display: none;*/
 }
 
 /*Доставка редкого товара*/
@@ -2111,7 +2220,6 @@ body {
   margin: auto;
   padding: 66px 70px;
   background-color: #ffffff;
-  margin-top: 612px;
 }
 
 .modal-content {
@@ -2257,8 +2365,8 @@ body {
 
 }
 
-.bt-minus,
-.bt-plus {
+.button-minus,
+.button-plus {
   margin: 0;
   width: 60px;
   padding: 22px;
@@ -2278,7 +2386,7 @@ body {
   background-color: #F0F0F0;
 }
 
-.bt-minus .button-border::before {
+.button-minus .button-border::before {
   content: "";
   display: block;
   background-image: url(/images/modal/minus.svg);
@@ -2286,7 +2394,7 @@ body {
   height: 2px;
 }
 
-.bt-plus .button-border::before {
+.button-plus .button-border::before {
   content: "";
   display: block;
   background-image: url(/images/modal/plus.svg);
@@ -2325,17 +2433,8 @@ body {
   display: none;
 }
 
-.tooltip-information-field {
-  width: 200px;
-  height: 160px;
-  background: #000000;
-  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
-  position: absolute;
-  right: -36px;
-  top: 40px;
-}
-
-.tooltip-information-triangle {
+.tooltip-information-field::before {
+  content: "";
   width: 0;
   height: 0;
   border-left: 9.5px solid transparent;
@@ -2344,8 +2443,18 @@ body {
   margin: 0 auto;
   padding: 0;
   position: absolute;
-  left: 5px;
-  top: 32px;
+  left: 142px;
+  top: -8px;
+}
+
+.tooltip-information-field {
+  width: 200px;
+  height: 160px;
+  background: #000000;
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
+  position: absolute;
+  right: -36px;
+  top: 40px;
 }
 
 .tooltip-information-description {
@@ -2390,9 +2499,10 @@ body {
   border: 2px solid #000000;
 }
 
-.navigation-search-form-input:focus {
+/*.navigation-search-form-input:focus {
   outline: 2px solid #AF4FFF;
-}
+}*/
+
 
 .navigation-search-form-input:disabled {
   opacity: 0.3;
@@ -2427,12 +2537,20 @@ body {
 
 /* Меню */
 
+.navigation-list-menu-right .navigation-item-menu:hover {
+  opacity: 0.6;
+}
+
 .navigation-item-menu:not(:first-child):hover,
 .navigation-item-menu:has(.current-link):hover,
 .navigation-item-user:not(:last-child):hover,
 .cart:hover,
 .navigation-products-catalog-item:hover {
   opacity: 0.6;
+}
+
+.navigation-list-menu-right .navigation-item-menu:active {
+  opacity: 0.3;
 }
 
 .navigation-item-menu:not(:first-child):active,
@@ -2574,16 +2692,13 @@ body {
 
 
 /*Подписка*/
-.subscribe-form-email-inputt:not(:placeholder-shown) {
+.subscribe-form-email-input:not(:placeholder-shown) {
   border: 2px solid #000000;
+  border-bottom: 3px solid #FF3D3D;
 }
 
 .subscribe-form-email-input:focus {
   background-color: #DCDCDC;
-}
-
-.subscribe-form-email-input:invalid {
-  border-bottom: 3px solid #FF3D3D;
 }
 
 .subscribe-form-email-input:disabled {
@@ -2897,27 +3012,27 @@ body {
 }
 
 
-.bt-minus:hover,
-.bt-plus:hover,
+.button-minus:hover,
+.button-plus:hover,
 .input-quantity:hover {
   background: #EBEBEB;
 }
 
-.bt-minus:active,
-.bt-plus:active,
+.button-minus:active,
+.button-plus:active,
 .input-quantity:active {
   opacity: 0.3;
 }
 
 
-.bt-minus:focus,
-.bt-plus:focus,
+.button-minus:focus,
+.button-plus:focus,
 .input-quantity:focus {
   outline: 2px solid #AF4FFF;
 }
 
-.bt-minus:disabled,
-.bt-plus:disabled,
+.button-minus:disabled,
+.button-plus:disabled,
 .input-quantity:disabled {
   background: #F0F0F0;
   opacity: 0.3;

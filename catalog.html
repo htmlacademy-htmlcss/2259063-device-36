@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <title>HTML Academy: Девайс - Каталог</title>
     <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="icon" href="favicon.ico">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" href="images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon/favicon.png">
   </head>
 
   <body>
@@ -37,33 +37,37 @@
               <a class="navigation-item-link login" href="#"> <span class="login-name">Коля Петухов</span></a>
             </li>
             <li class="navigation-item-user">
+              <a class="navigation-item-link login visually-hidden" href="#">Войти</a>
+            </li>
+            <li class="navigation-item-user">
               <a class="navigation-item-link logout" href="#">Выйти</a>
             </li>
             <li class="navigation-item-user">
               <a class="navigation-item-link compare" href="#">Сравнить</a>
             </li>
-            <li class="navigation-item-user cart-item">
+            <li class="navigation-item-user cart-item ">
               <a class="navigation-item-link cart" href="#"><span class="navigation-item-icon-value">2</span>Корзина</a>
               <!--Тултип на корзине-->
               <div class="cart-tooltip-container">
-                <div class="cart-tooltip-triangle"></div>
                 <div class="cart-tooltip-field">
                   <ul class="cart-tooltip-list">
                     <li class="cart-tooltip-item">
                       <a class="cart-tooltip-link" href="#">
-                        <img class="cart-tooltip-image" src="/images/index/tooltip_selfie_am.png" width="39" height="43"
+                        <img class="cart-tooltip-image" src="images/index/tooltip_selfie_am.jpg" width="39" height="43"
                           alt="Любительская селфи-палка.">
                         <p class="cart-tooltip-description">Любительская<br>селфи-палка</p>
                       </a>
-                      <button class="cart-tooltip-close-button"><span class="close-button-icon"></span></button>
+                      <button class="cart-tooltip-close-button" type="button"><span
+                          class="close-button-icon"></span></button>
                     </li>
                     <li class="cart-tooltip-item">
                       <a class="cart-tooltip-link" href="#">
-                        <img class="cart-tooltip-image" src="/images/index/tooltip_selfie_pro.png" width="39"
-                          height="43" alt="Профессиональная селфи-палка.">
+                        <img class="cart-tooltip-image" src="images/index/tooltip_selfie_pro.jpg" width="39" height="43"
+                          alt="Профессиональная селфи-палка.">
                         <p class="cart-tooltip-description">Профессиональная<br>селфи-палка</p>
                       </a>
-                      <button class="cart-tooltip-close-button"><span class="close-button-icon"></span></button>
+                      <button class="cart-tooltip-close-button" type="button"><span
+                          class="close-button-icon"></span></button>
                     </li>
                   </ul>
                   <div class="cart-tooltip-result">
@@ -88,7 +92,7 @@
                       реальность</a>
                   </li>
                   <li class="navigation-products-catalog-item">
-                    <a class="navigation-products-catalog-link" href="#">Моноподы для cелфи</a>
+                    <a class="navigation-products-catalog-link" href="catalog.html">Моноподы для cелфи</a>
                   </li>
                   <li class="navigation-products-catalog-item">
                     <a class="navigation-products-catalog-link" href="#">Экшн-камеры</a>
@@ -109,6 +113,8 @@
                 </ul>
               </div>
             </li>
+          </ul>
+          <ul class="navigation-list-menu-right">
             <li class="navigation-item-menu">
               <a class="navigation-item-menu-link" href="#">Доставка</a>
             </li>
@@ -124,7 +130,7 @@
     </header>
     <main class="main-index main-container">
       <div class="page-container">
-        <!--<section class="main-inner-section">-->
+
         <header class="inner-header">
           <h1 class="inner-header-title">Моноподы для селфи</h1>
           <ol class="breadcrumbs">
@@ -141,7 +147,7 @@
             </li>
           </ol>
         </header>
-        <!--</section>-->
+
 
         <section class="result">
           <h2 class="visually-hidden">Результаты поиска</h2>
@@ -392,7 +398,7 @@
     <div class="modal-container modal-container-closed">
       <div class="modal modal-search">
         <section class="modal-content">
-          <button class="modal-close-button">
+          <button class="modal-close-button" type="button">
             <span class="visually-hidden">Закрыть.</span>
           </button>
           <h2 class="modal-title">Доставка под заказ</h2>
@@ -424,9 +430,9 @@
                 </div>
               </div>
               <div class="quantity-panel">
-                <button class="bt-minus" type="button"><span class="button-border"></span></button>
+                <button class="button-minus" type="button"><span class="button-border"></span></button>
                 <input class="input-quantity" type="text" name="quantity" value="1">
-                <button class="bt-plus" type="button"><span class="button-border"></span></button>
+                <button class="button-plus" type="button"><span class="button-border"></span></button>
               </div>
             </div>
             <button type="submit" class="modal-submit line-button">Отправить</button>
