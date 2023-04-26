@@ -300,12 +300,16 @@ body {
 }
 
 .index-login {
-  margin-right: 136px;
+  margin-right: 158px;
 }
 
 .navigation-item-user:has(.visually-hidden) {
   position: absolute;
   display: none;
+}
+
+.navigation-item-user-catalog {
+  margin-right: 8px;
 }
 
 .item-visually-hidden {
@@ -2900,3 +2904,5 @@ body {
 .modal-close-button:focus {
   outline: 2px solid #AF4FFF;
 }
+
+/*ОК*/
