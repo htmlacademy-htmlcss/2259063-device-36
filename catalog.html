@@ -32,7 +32,7 @@
               Найти
             </button>
           </form>
-          <ul class="navigation-list-user">
+          <ul class="navigation-list-user navigation-list-user-catalog">
             <li class="navigation-item-user">
               <a class="navigation-item-link login" href="#"> <span class="login-name">Коля Петухов</span></a>
             </li>
@@ -172,7 +172,7 @@
                       <span class="visually-hidden">Минимальная стоимость</span>
                     </label>
                     <label class="slider-value" for="max">
-                      <input class="control-slider-value" type="text" value="до 5000">
+                      <input class="control-slider-value" id="max" type="text" value="до 5000">
                       <span class="visually-hidden">Максимальная стоимость</span>
                     </label>
                   </div>
@@ -311,7 +311,7 @@
                 </ul>
                 <a class="result-card-more-link" href="#">Загрузить ещё</a>
                 <ul class="pagination">
-                  <li class="pagination-item">
+                  <li class="pagination-item pagination-word-item">
                     <a class="pagination-link-word" href="#">Назад</a>
                   </li>
                   <li class="pagination-item">
@@ -329,7 +329,7 @@
                   <li class="pagination-item">
                     <a class="pagination-link-number" href="#">15</a>
                   </li>
-                  <li class="pagination-item">
+                  <li class="pagination-item pagination-word-item">
                     <a class="pagination-link-word" href="#">Вперед</a>
                   </li>
                 </ul>
@@ -422,7 +422,7 @@
                 placeholder="В свободной форме">
             </div>
             <div class="quantity-container">
-              <h2 class="form-label form-quantity">Количество:</h2>
+              <p class="form-label form-quantity">Количество:</p>
               <div class="tooltip-active">
                 <span class="visually-hidden">Дополнительная информация</span>
                 <div class="tooltip-information-container">
@@ -434,9 +434,11 @@
                 </div>
               </div>
               <div class="quantity-panel">
-                <button class="button-minus" type="button"><span class="button-border"></span></button>
+                <button class="button-minus" type="button"><span class="button-border"></span><span
+                    class="visually-hidden">Уменьшить</span></button>
                 <input class="input-quantity" type="text" name="quantity" value="1">
-                <button class="button-plus" type="button"><span class="button-border"></span></button>
+                <button class="button-plus" type="button"><span class="button-border"></span><span
+                    class="visually-hidden">Увеличить</span></button>
               </div>
             </div>
             <button type="submit" class="modal-submit line-button">Отправить</button>
