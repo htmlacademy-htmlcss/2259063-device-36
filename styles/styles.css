@@ -285,6 +285,9 @@ body {
 
 .logout {
   text-overflow: ellipsis;
+}
+
+.logout-description {
   opacity: 0.3;
 }
 
@@ -302,6 +305,10 @@ body {
 
 .navigation-item-user:has(.visually-hidden) {
   position: absolute;
+  display: none;
+}
+
+.item-visually-hidden {
   display: none;
 }
 
@@ -2392,7 +2399,7 @@ body {
 }
 
 .navigation-item-menu:not(:first-child):hover,
-.navigation-item-menu:has(.current-link):hover,
+/*.navigation-item-menu:has(.current-link):hover,*/
 .navigation-item-user:not(:last-child):hover,
 .cart:hover,
 .navigation-products-catalog-item:hover {
@@ -2404,7 +2411,7 @@ body {
 }
 
 .navigation-item-menu:not(:first-child):active,
-.navigation-item-menu:has(.current-link):active,
+/*.navigation-item-menu:has(.current-link):active,*/
 .navigation-item-user:not(:last-child):active,
 .cart:hover,
 .navigation-products-catalog-item:active {
