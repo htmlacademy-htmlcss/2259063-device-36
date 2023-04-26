@@ -24,13 +24,13 @@
         <div class="navigation-top-container">
           <form class="navigation-search-form" action="https://echo.htmlacademy.ru/" method="get">
             <p class="navigation-search-form-device">
-              <label class="visually-hidden" for="search">Поиск по сайту</label>
+              <label class="visually-hidden search-label" for="search">Поиск по сайту</label>
               <input class="navigation-search-form-input" type="text" name="navigation-search" id="search"
                 placeholder="Поиск по сайту" />
-              <button class="navigation-search-form-button" type="button">
-                Найти
-              </button>
             </p>
+            <button class="navigation-search-form-button" type="button">
+              Найти
+            </button>
           </form>
           <ul class="navigation-list-user">
             <li class="navigation-item-user">
@@ -130,7 +130,6 @@
     </header>
     <main class="main-index main-container">
       <div class="page-container">
-
         <header class="inner-header">
           <h1 class="inner-header-title">Моноподы для селфи</h1>
           <ol class="breadcrumbs">
@@ -147,8 +146,6 @@
             </li>
           </ol>
         </header>
-
-
         <section class="result">
           <h2 class="visually-hidden">Результаты поиска</h2>
           <div class="result-container">
@@ -170,8 +167,14 @@
                     </div>
                   </div>
                   <div class="value-container">
-                    <span class="control-slider-value">от 0</span>
-                    <span class="control-slider-value">до 5000</span>
+                    <label class="slider-value" for="min">
+                      <input class="control-slider-value" type="text" id="min" value="от 0">
+                      <span class="visually-hidden">Минимальная стоимость</span>
+                    </label>
+                    <label class="slider-value" for="max">
+                      <input class="control-slider-value" type="text" value="до 5000">
+                      <span class="visually-hidden">Максимальная стоимость</span>
+                    </label>
                   </div>
                 </div>
                 <div class="fliter-color"><!--Чекбокс цветов-->
@@ -421,6 +424,7 @@
             <div class="quantity-container">
               <h2 class="form-label form-quantity">Количество:</h2>
               <div class="tooltip-active">
+                <span class="visually-hidden">Дополнительная информация</span>
                 <div class="tooltip-information-container">
                   <div class="tooltip-information-triangle"></div>
                   <div class="tooltip-information-field">
