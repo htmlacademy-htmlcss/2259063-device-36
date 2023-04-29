@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="icon" href="images/favicon/favicon.ico">
+    <link rel="icon" href="favicon.ico">
     <link rel="icon" type="image/png" href="images/favicon/favicon.png">
   </head>
 
@@ -26,9 +26,9 @@
             <p class="navigation-search-form-device">
               <label class="visually-hidden search-label" for="search">Поиск по сайту</label>
               <input class="navigation-search-form-input" type="text" name="navigation-search" id="search"
-                placeholder="Поиск по сайту" />
+                placeholder="Поиск по сайту" required>
             </p>
-            <button class="navigation-search-form-button" type="button">
+            <button class="navigation-search-form-button" type="submit">
               Найти
             </button>
           </form>
@@ -58,7 +58,7 @@
                           alt="Любительская селфи-палка.">
                         <p class="cart-tooltip-description">Любительская<br>селфи-палка</p>
                       </a>
-                      <button class="cart-tooltip-close-button" type="button"><span
+                      <button class="cart-tooltip-close-button" type="button" aria-label="Закрыть"><span
                           class="close-button-icon"></span></button>
                     </li>
                     <li class="cart-tooltip-item">
@@ -67,7 +67,7 @@
                           alt="Профессиональная селфи-палка.">
                         <p class="cart-tooltip-description">Профессиональная<br>селфи-палка</p>
                       </a>
-                      <button class="cart-tooltip-close-button" type="button"><span
+                      <button class="cart-tooltip-close-button" type="button" aria-label="Закрыть"><span
                           class="close-button-icon"></span></button>
                     </li>
                   </ul>
@@ -286,13 +286,13 @@
           <div class="advantages-container">
             <ul class="advantages-list">
               <li class="advantages-item advantages-current">
-                <a class="advantages-item-link" href="#">Доставка</a>
+                <button class="advantages-item-button" type="button">Доставка</button>
               </li>
               <li class="advantages-item">
-                <a class="advantages-item-link line-button" href="#">Гарантия</a>
+                <button class="advantages-item-button line-button" type="button">Гарантия</button>
               </li>
               <li class="advantages-item">
-                <a class="advantages-item-link line-button" href="#">Кредит</a>
+                <button class="advantages-item-button line-button" type="button">Кредит</button>
               </li>
             </ul>
             <div class="advantages-container-description">
@@ -387,7 +387,7 @@
                 <p class="subscribe-form-email">
                   <label class="visually-hidden" for="email">Ваша электронная почта.</label>
                   <input class="subscribe-form-email-input" type="email" id="email" placeholder="Ваш e-mail"
-                    name="email" required />
+                    name="email" required>
                   <button class="button-subscribe" type="submit">
                     Подписаться
                   </button>
@@ -468,18 +468,19 @@
           <form class="delivery-form" method="post" action="https://echo.htmlacademy.ru/">
             <div class="field-group">
               <label class="form-label" for="delivery-name">Ваше имя:</label>
-              <input class="check-form" type="text" id="delivery-name" name="delivery-name" placeholder="Введите имя">
+              <input class="check-form" type="text" id="delivery-name" name="delivery-name" placeholder="Введите имя"
+                required>
             </div>
             <div class="field-group">
               <label class="form-label" for="delivery-email">Ваш e-mail:</label>
               <input class="check-form" type="email" id="delivery-email" name="delivery-email" value="Почта"
-                placeholder="Введите электронную почту">
+                placeholder="Введите электронную почту" required>
               <span class="email-text">Забавный у вас адрес</span>
             </div>
             <div class="field-group">
               <label class="form-label" for="delivery-product">Что нужно привезти:</label>
               <input class="check-form" type="text" id="delivery-product" name="delivery-product"
-                placeholder="В свободной форме">
+                placeholder="В свободной форме" required>
             </div>
             <div class="quantity-container">
               <p class="form-label form-quantity">Количество:</p>
@@ -496,7 +497,7 @@
               <div class="quantity-panel">
                 <button class="button-minus" type="button"><span class="button-border"></span><span
                     class="visually-hidden">Уменьшить</span></button>
-                <input class="input-quantity" type="text" name="quantity" value="1">
+                <input class="input-quantity" type="text" name="quantity" value="1" required>
                 <button class="button-plus" type="button"><span class="button-border"></span><span
                     class="visually-hidden">Увеличить</span></button>
               </div>
