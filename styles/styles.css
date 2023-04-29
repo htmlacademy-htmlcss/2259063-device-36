@@ -347,7 +347,7 @@ body {
 
 .cart-tooltip-container {
   position: absolute;
-  right: -78px;
+  right: -83px;
   top: 30px;
   width: 320px;
   display: none;
@@ -434,7 +434,7 @@ body {
   background-color: #1A1A1A;
   padding-bottom: 7px;
   padding-top: 15px;
-  padding-right: 25px;
+  padding-right: 20px;
 }
 
 .cart-tooltip-result-description {
@@ -632,7 +632,7 @@ body {
 }
 
 .navigation-products-catalog-list:nth-child(2) {
-  margin-left: 95px;
+  margin-left: 92px;
 }
 
 .navigation-products-catalog-list:not(:first-child) {
