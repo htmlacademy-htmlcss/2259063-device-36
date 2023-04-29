@@ -990,8 +990,6 @@ body {
 
 .advantages-item-button {
   display: block;
-  text-decoration: none;
-  color: inherit;
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -1004,6 +1002,7 @@ body {
   min-width: 164px;
   padding-top: 10px;
   padding-bottom: 11px;
+  cursor: pointer;
 }
 
 .advantages-current .advantages-item-button {
@@ -1013,6 +1012,7 @@ body {
   background-color: #000000;
   width: 280px;
   padding-left: 0;
+  color: #FFE17F;
 }
 
 .advantages-item:not(.advantages-current) .advantages-item-button {
